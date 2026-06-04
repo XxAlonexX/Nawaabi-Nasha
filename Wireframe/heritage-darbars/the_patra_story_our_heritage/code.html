@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>PATRA | Our Heritage Story</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&amp;family=Playfair+Display:ital,wght@0,400..900;1,400..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-error-container": "#93000a",
+                    "on-background": "#1c1b1b",
+                    "outline-variant": "#c0c8c3",
+                    "on-secondary-fixed": "#241a00",
+                    "surface-container-highest": "#e5e2e1",
+                    "on-secondary-fixed-variant": "#574500",
+                    "secondary-fixed": "#ffe088",
+                    "on-primary-container": "#7ba894",
+                    "surface-container-high": "#eae7e7",
+                    "on-tertiary-container": "#a09f98",
+                    "primary": "#00261a",
+                    "surface-dim": "#dcd9d9",
+                    "on-surface": "#1c1b1b",
+                    "on-error": "#ffffff",
+                    "surface": "#fcf9f8",
+                    "inverse-on-surface": "#f3f0ef",
+                    "on-surface-variant": "#414944",
+                    "on-primary-fixed": "#002116",
+                    "surface-bright": "#fcf9f8",
+                    "inverse-surface": "#313030",
+                    "error-container": "#ffdad6",
+                    "background": "#fcf9f8",
+                    "surface-container-low": "#f6f3f2",
+                    "error": "#ba1a1a",
+                    "on-tertiary-fixed": "#1c1c18",
+                    "on-secondary-container": "#745c00",
+                    "on-secondary": "#ffffff",
+                    "on-primary": "#ffffff",
+                    "tertiary": "#21211d",
+                    "tertiary-fixed": "#e5e2db",
+                    "secondary": "#735c00",
+                    "surface-tint": "#3b6756",
+                    "surface-variant": "#e5e2e1",
+                    "on-primary-fixed-variant": "#234f3f",
+                    "tertiary-container": "#363631",
+                    "on-tertiary-fixed-variant": "#474742",
+                    "on-tertiary": "#ffffff",
+                    "tertiary-fixed-dim": "#c9c6c0",
+                    "surface-container": "#f0eded",
+                    "secondary-container": "#fed65b",
+                    "primary-fixed": "#beedd7",
+                    "primary-container": "#0f3d2e",
+                    "inverse-primary": "#a2d1bb",
+                    "surface-container-lowest": "#ffffff",
+                    "secondary-fixed-dim": "#e9c349",
+                    "primary-fixed-dim": "#a2d1bb",
+                    "outline": "#717974"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "spacing": {
+                    "section-gap": "120px",
+                    "unit": "8px",
+                    "margin-mobile": "20px",
+                    "gutter": "24px",
+                    "container-max-width": "1280px",
+                    "margin-desktop": "64px"
+            },
+            "fontFamily": {
+                    "display-lg": ["Playfair Display"],
+                    "display-lg-mobile": ["Playfair Display"],
+                    "body-lg": ["DM Sans"],
+                    "label-caps": ["DM Sans"],
+                    "headline-md": ["Playfair Display"],
+                    "label-sm": ["DM Sans"],
+                    "headline-lg": ["Playfair Display"],
+                    "body-md": ["DM Sans"]
+            },
+            "fontSize": {
+                    "display-lg": ["64px", {"lineHeight": "72px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "display-lg-mobile": ["40px", {"lineHeight": "48px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                    "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                    "label-caps": ["12px", {"lineHeight": "16px", "letterSpacing": "0.1em", "fontWeight": "600"}],
+                    "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                    "label-sm": ["13px", {"lineHeight": "18px", "fontWeight": "500"}],
+                    "headline-lg": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            vertical-align: middle;
+        }
+        .hero-vignette {
+            background: linear-gradient(to bottom, rgba(0,38,26,0.4) 0%, rgba(0,38,26,0.9) 100%);
+        }
+        .line-divider {
+            height: 1px;
+            background: linear-gradient(90deg, transparent, #735c00, transparent);
+        }
+        .fade-in-up {
+            animation: fadeInUp 1.2s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+        }
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(40px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface font-body-md selection:bg-secondary/30">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-md dark:bg-surface-container/80">
+<div class="flex justify-between items-center px-margin-desktop py-4 max-w-container-max-width mx-auto">
+<div class="font-display-lg text-headline-md tracking-tighter text-primary dark:text-primary-fixed">PATRA</div>
+<div class="hidden md:flex gap-8 items-center">
+<a class="font-label-caps text-label-caps text-on-surface-variant dark:text-outline-variant hover:text-secondary dark:hover:text-secondary-fixed transition-colors duration-300 transition-opacity duration-200 cursor-pointer" href="#">Heritage</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant dark:text-outline-variant hover:text-secondary dark:hover:text-secondary-fixed transition-colors duration-300 transition-opacity duration-200 cursor-pointer" href="#">Artistry</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant dark:text-outline-variant hover:text-secondary dark:hover:text-secondary-fixed transition-colors duration-300 transition-opacity duration-200 cursor-pointer" href="#">Vision</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant dark:text-outline-variant hover:text-secondary dark:hover:text-secondary-fixed transition-colors duration-300 transition-opacity duration-200 cursor-pointer" href="#">Collections</a>
+</div>
+<button class="font-label-caps text-label-caps bg-primary text-on-primary px-6 py-2 rounded-full hover:bg-primary-container transition-colors duration-300">Boutique</button>
+</div>
+</nav>
+<main>
+<!-- Section 1: Hero -->
+<section class="relative min-h-screen flex items-center justify-center overflow-hidden bg-primary">
+<div class="absolute inset-0 z-0">
+<div class="absolute inset-0 hero-vignette"></div>
+<img alt="A Legacy in Every Leaf" class="w-full h-full object-cover opacity-60" data-alt="A close-up, high-art photograph of a single, vibrant green betel leaf with dew drops, resting on a dark, polished stone surface. The lighting is moody and dramatic, focusing on the intricate vein patterns of the leaf. Deep forest green and subtle gold accents dominate the color palette, creating a feeling of ultra-premium heritage luxury and ancient Indian sophistication." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCsAYjoT_NQMSODKZmV7Yh1Ea8pqJthyzmFFLA33qMwHCjr0aJ0asPhtHCLA7PHXUJ8a8m6kZ6lKD-pQ8raSED_TmKnGYr13KgV7kcb-HqFCxb8jszvUFCO0ZG2CRNgRxi5i-yueHzpreW9PVhgUP-XeFK910Mz0ru46oFFD27_7mqJCQbl0Ed6LA0MUdI_9SV0KjafZKKCgrE2uN6GRKRcYJ9M7PPXCg8SA_X7McDQ0jntS6DMDKRPNeaYfUy5pt983NibRCvQ3cA"/>
+</div>
+<div class="relative z-10 text-center px-margin-mobile max-w-4xl mx-auto fade-in-up">
+<p class="font-label-caps text-label-caps text-secondary-fixed mb-6 tracking-widest">ESTABLISHED IN TRADITION</p>
+<h1 class="font-display-lg text-display-lg-mobile md:text-display-lg text-surface-bright mb-8 leading-tight">A Legacy in Every Leaf</h1>
+<p class="font-body-lg text-body-lg text-primary-fixed max-w-2xl mx-auto opacity-90">
+                    Reviving the Mughal-era sophistication of Paan through a lens of modern minimalist precision. PATRA is a tribute to the deliberate pace of history, where every fold tells a story of royalty.
+                </p>
+</div>
+<div class="absolute bottom-12 left-1/2 -translate-x-1/2 animate-bounce text-secondary-fixed">
+<span class="material-symbols-outlined text-4xl">expand_more</span>
+</div>
+</section>
+<!-- Section 2: The Art of the Betel -->
+<section class="py-section-gap bg-surface">
+<div class="max-w-container-max-width mx-auto px-margin-desktop">
+<div class="grid md:grid-cols-12 gap-gutter items-center">
+<div class="md:col-span-5">
+<span class="font-label-caps text-label-caps text-secondary mb-4 block">THE CRAFTSMANSHIP</span>
+<h2 class="font-display-lg text-headline-lg md:text-display-lg-mobile text-primary mb-8">The Art of the Betel</h2>
+</div>
+<div class="md:col-span-7 space-y-8">
+<p class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed">
+                            True luxury cannot be rushed. It resides in the <span class="text-primary font-semibold italic">deliberate pace</span> of manual labor—the gentle hand-pressing of gulkand made from sun-dried Damask roses, and the meticulous selection of vintage mewa aged to perfection.
+                        </p>
+<div class="line-divider w-24"></div>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                            Our betel leaves are sourced from heritage groves where the soil is tended with organic compost and the water is filtered through copper channels, ensuring a leaf of unparalleled suppleness and flavor profile.
+                        </p>
+</div>
+</div>
+</div>
+</section>
+<!-- Section 3: The Lineage (Timeline) -->
+<section class="py-section-gap bg-primary text-surface-bright">
+<div class="max-w-container-max-width mx-auto px-margin-desktop">
+<div class="text-center mb-24">
+<h2 class="font-display-lg text-headline-lg md:text-display-lg-mobile mb-4">The Lineage</h2>
+<div class="w-1 h-20 bg-secondary mx-auto mb-4"></div>
+</div>
+<div class="space-y-32 relative">
+<!-- Vertical line for desktop -->
+<div class="hidden md:block absolute left-1/2 top-0 bottom-0 w-px bg-on-primary-fixed-variant -translate-x-1/2"></div>
+<!-- Milestone 1 -->
+<div class="relative grid md:grid-cols-2 gap-16 items-center">
+<div class="md:text-right">
+<span class="font-label-caps text-label-caps text-secondary-fixed block mb-2">18TH CENTURY ORIGINS</span>
+<h3 class="font-display-lg text-headline-lg mb-4">The Inspiration</h3>
+<p class="font-body-md text-on-primary-container leading-relaxed md:pl-12">
+                                Drawing from the opulent royal courts of Awadh, where the 'Paan-dan' was a symbol of hospitality and high culture. We studied ancient manuscripts to rediscover the forgotten proportions of spice and essence.
+                            </p>
+</div>
+<div class="hidden md:flex justify-start">
+<div class="w-12 h-12 rounded-full bg-secondary-fixed flex items-center justify-center text-primary font-bold shadow-xl">01</div>
+</div>
+</div>
+<!-- Milestone 2 -->
+<div class="relative grid md:grid-cols-2 gap-16 items-center">
+<div class="hidden md:flex justify-end order-1">
+<div class="w-12 h-12 rounded-full bg-secondary-fixed flex items-center justify-center text-primary font-bold shadow-xl">02</div>
+</div>
+<div class="md:text-left order-2">
+<span class="font-label-caps text-label-caps text-secondary-fixed block mb-2">MODERN EVOLUTION</span>
+<h3 class="font-display-lg text-headline-lg mb-4">The Renaissance</h3>
+<p class="font-body-md text-on-primary-container leading-relaxed md:pr-12">
+                                Reimagining tradition for the modern connoisseur. We stripped away the additives and synthetic flavorings of the industrial age, returning to a pure, botanical core that prioritizes health and sensory clarity.
+                            </p>
+</div>
+</div>
+<!-- Milestone 3 -->
+<div class="relative grid md:grid-cols-2 gap-16 items-center">
+<div class="md:text-right">
+<span class="font-label-caps text-label-caps text-secondary-fixed block mb-2">GLOBAL HORIZONS</span>
+<h3 class="font-display-lg text-headline-lg mb-4">The Vision</h3>
+<p class="font-body-md text-on-primary-container leading-relaxed md:pl-12">
+                                Elevating Indian hospitality to a global luxury standard. From the corridors of five-star residences to the dining tables of the world's most discerning palettes, PATRA is the new language of fine finishing.
+                            </p>
+</div>
+<div class="hidden md:flex justify-start">
+<div class="w-12 h-12 rounded-full bg-secondary-fixed flex items-center justify-center text-primary font-bold shadow-xl">03</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Section 4: The Craft (Closing Statement) -->
+<section class="py-section-gap bg-surface-container-low text-center overflow-hidden">
+<div class="max-w-4xl mx-auto px-margin-desktop relative">
+<span class="material-symbols-outlined text-6xl text-secondary mb-8 block opacity-40">eco</span>
+<h2 class="font-display-lg text-display-lg-mobile md:text-headline-lg text-primary mb-8 italic">"Purity is our only mandate; Heritage is our only guide."</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto mb-12">
+                    Our commitment to the leaf is absolute. We do not compromise on the provenance of our ingredients or the time required to create a single PATRA wrap. It is a slow luxury for a fast world.
+                </p>
+<div class="flex justify-center">
+<button class="font-label-caps text-label-caps border border-primary text-primary px-10 py-4 hover:bg-primary hover:text-surface-bright transition-all duration-500 tracking-widest">
+                        EXPLORE THE COLLECTION
+                    </button>
+</div>
+<!-- Background decoration -->
+<div class="absolute -top-24 -right-24 w-64 h-64 border border-secondary/10 rounded-full"></div>
+<div class="absolute -bottom-12 -left-12 w-48 h-48 border border-secondary/10 rounded-full"></div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-primary dark:bg-on-primary-fixed">
+<div class="flex flex-col md:flex-row justify-between items-center px-margin-desktop py-section-gap max-w-container-max-width mx-auto">
+<div class="mb-12 md:mb-0 text-center md:text-left">
+<div class="font-display-lg text-headline-lg text-secondary mb-4">PATRA</div>
+<p class="font-body-md text-on-primary/60 max-w-xs">© 2024 PATRA Heritage. Crafted with deliberate pace.</p>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-12">
+<div class="flex flex-col gap-4">
+<span class="font-label-caps text-label-caps text-secondary-fixed opacity-50">STORY</span>
+<a class="font-body-md text-on-primary/60 hover:text-secondary transition-colors" href="#">The Tradition</a>
+<a class="font-body-md text-on-primary/60 hover:text-secondary transition-colors" href="#">Sustainability</a>
+</div>
+<div class="flex flex-col gap-4">
+<span class="font-label-caps text-label-caps text-secondary-fixed opacity-50">EXPERIENCE</span>
+<a class="font-body-md text-on-primary/60 hover:text-secondary transition-colors" href="#">Private Tasting</a>
+<a class="font-body-md text-on-primary/60 hover:text-secondary transition-colors" href="#">Boutiques</a>
+</div>
+<div class="flex flex-col gap-4">
+<span class="font-label-caps text-label-caps text-secondary-fixed opacity-50">LEGAL</span>
+<a class="font-body-md text-on-primary/60 hover:text-secondary transition-colors" href="https://docs.google.com/document/d/1CWff7dJP3Q8vV6zS-aL6E0Gj_wNBv_P-ViawzMVnYkc/edit?usp=sharing">Privacy</a>
+<a class="font-body-md text-on-primary/60 hover:text-secondary transition-colors" href="#">Terms</a>
+</div>
+<div class="flex flex-col gap-4">
+<span class="font-label-caps text-label-caps text-secondary-fixed opacity-50">SOCIAL</span>
+<a class="font-body-md text-on-primary/60 hover:text-secondary transition-colors" href="#">Instagram</a>
+<a class="font-body-md text-on-primary/60 hover:text-secondary transition-colors" href="#">Journal</a>
+</div>
+</div>
+</div>
+<div class="border-t border-on-primary/5 py-8 text-center">
+<a class="font-label-caps text-label-caps text-secondary-fixed uppercase tracking-tighter" href="#">Back to top</a>
+</div>
+</footer>
+<script>
+        // Simple scroll reveal for sections
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('fade-in-up');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('section > div').forEach(section => {
+            section.style.opacity = '0';
+            observer.observe(section);
+        });
+    </script>
+</body></html>
